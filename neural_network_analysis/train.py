@@ -67,7 +67,6 @@ print(images.shape)
 print(labels.shape)
 
 # Let's visualize some of the images
-%matplotlib inline
 import matplotlib.pyplot as plt
 
 plt.imshow(images[0].numpy().squeeze(), cmap='gray_r')
@@ -81,7 +80,6 @@ for index in range(1, num_of_images + 1):
 
 
 # Model Params
-!pip install torchsummary
 from torchsummary import summary
 use_cuda = torch.cuda.is_available()
 device = torch.device("cuda" if use_cuda else "cpu")
@@ -162,7 +160,7 @@ for epoch in range(EPOCHS):
     test(model, device, test_loader)
 
 t = [t_items.item() for t_items in train_losses]
-%matplotlib inline
+
 import matplotlib.pyplot as plt
 fig, axs = plt.subplots(2,2,figsize=(15,10))
 axs[0, 0].plot(t)
