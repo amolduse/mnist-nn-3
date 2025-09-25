@@ -31,7 +31,7 @@ Analysis:
        count is too less. Its time to add some capacity to the model and see if we can reach closer to 99.4% accuracy.
     4. Adding some capacity to the model helped us to increase accuracy but it was capped to around 99.2 which is less than our target.
        But we have achieved our target of reducing parameters to less than 8k.
-    5. Our model needs further improvement and in next trial we will try other things like image augmentation, schedulers etc.   
+    5. Our model needs further improvement and in next trial we will try other things like correct location of max pooling, image augmentation, schedulers etc.   
 
 
 """
