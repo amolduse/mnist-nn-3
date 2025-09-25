@@ -60,6 +60,14 @@ While the model was much improved, it still hadn't reached the desired 99.4% acc
 - **Additional Augmentation**: Further augmentation, specifically `RandomAffine` transformations, pushed the test accuracy to 99.34%.
 - **Scheduler**: The final piece of the puzzle was adding a `StepLR` learning rate scheduler. This allowed the model to fine-tune its weights more effectively in the later stages of training, finally achieving the target test accuracy of 99.43%.
 
+## Model Comparison
+
+| Model   | Parameters | Best Train Accuracy (%) | Best Test Accuracy (%) | Key Changes                                                                                             |
+| :------ | :--------- | :---------------------- | :--------------------- | :------------------------------------------------------------------------------------------------------ |
+| Model 1 | 10.4k      | 98.55                   | 98.43                  | Basic CNN architecture.                                                                                 |
+| Model 2 | 8.0k       | 98.86                   | 99.20                  | Added Batch Norm, Dropout, and GAP. Reduced parameters.                                                 |
+| Model 3 | 7.1k       | 99.01                   | 99.43                  | Optimized Max Pooling, added Image Augmentation and a Learning Rate Scheduler. Further reduced parameters. |
+
 ## Summary
 
 This project demonstrates a systematic approach to improving a neural network model. Starting with a basic architecture, we iteratively introduced new techniques, including batch normalization, dropout, global average pooling, thoughtful layer placement, image augmentation, and learning rate scheduling. Each change was evaluated, and the insights gained from each step informed the next. The final model, with only 7.1k parameters, successfully achieved the ambitious goal of 99.43% test accuracy, showcasing the power of this iterative and analytical approach to model development.
