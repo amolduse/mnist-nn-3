@@ -26,8 +26,8 @@ Analysis:
     1. After adding max pooling after 2 conv layers (receptive field of 5x5) accuracy but gap between train and test accuracy didn't improve.
        The network was not overfitting but it was underfitting. So, I added image augmentation to increase the data size.
     2. After adding image augmentation accuracy improved but still there was gap between train and test accuracy and didn't achieve the desired result.
-    3. As network was not learning in lower parameters I increased the dataset by adding more image augmentation which gave promissing result of test
-       accuracy of 99.34%.
+    3. As network was not learning in lower parameters I increased the dataset by adding more image augmentation 
+       (RandomAffine to shift image horizontally or vertically by few pixels) which gave promissing result of test accuracy of 99.34%.
     4. Finally after adding schedular with StepLR I achieved the desired result of 99.43% test accuracy.
 
 Summary:
